@@ -5,6 +5,7 @@ import tkinter as tk
 from tkinter import messagebox, simpledialog
 import os
 import re
+from azure_ttk import *
 
 WHITELIST_FILE = "/etc/guideos-hosts-whitelist.txt"
 
@@ -54,19 +55,29 @@ def save_and_exit():
 # GUI
 root = tk.Tk()
 root.title("GuideOS Whitelist-Editor")
-root.geometry("400x350")
+root.geometry("430x460")
+
+root.tk.call("source", TCL_THEME_FILE_PATH)
+
+if "dark" in theme_name or "Dark" in theme_name:
+    root.tk.call("set_theme", "dark")
+else:
+    root.tk.call("set_theme", "light")
 
 whitelist = load_whitelist()
 
-listbox = tk.Listbox(root, selectmode=tk.MULTIPLE, height=15)
+listbox_frame = ttk.LabelFrame(root, text="Whitelists")
+listbox_frame.pack(padx=10, pady=10, fill="both", expand=True)
+
+listbox = tk.Listbox(listbox_frame, selectmode=tk.MULTIPLE, height=15,highlightthickness=0,borderwidth=0)
 listbox.pack(padx=10, pady=10, fill="both", expand=True)
 
 btn_frame = tk.Frame(root)
-btn_frame.pack(pady=5)
+btn_frame.pack(pady=10,padx=10, fill="x", expand=True)
 
-tk.Button(btn_frame, text="Hinzufügen", command=add_domain).pack(side="left", padx=5)
-tk.Button(btn_frame, text="Entfernen", command=remove_selected).pack(side="left", padx=5)
-tk.Button(btn_frame, text="Speichern & Schließen", command=save_and_exit).pack(side="left", padx=5)
+ttk.Button(btn_frame, text="Hinzufügen", command=add_domain).pack(side="left", padx=5,fill="x",expand=True)
+ttk.Button(btn_frame, text="Entfernen", command=remove_selected).pack(side="left", padx=5,fill="x",expand=True)
+ttk.Button(btn_frame, text="Speichern & Schließen", command=save_and_exit).pack(side="left", padx=5,fill="x",expand=True)
 
 update_listbox()
 root.mainloop()

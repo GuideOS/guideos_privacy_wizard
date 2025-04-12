@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import urllib.request
 import sys
+from azure_ttk import *
 
 RESOLV_CONF = "/etc/resolv.conf"
 RESOLV_BACKUP = "/etc/resolv.conf.guideos.original"
@@ -103,6 +104,15 @@ def ask_yes_no(title, message):
 
 def wizard():
     root = tk.Tk()
+    
+
+    root.tk.call("source", TCL_THEME_FILE_PATH)
+
+    if "dark" in theme_name or "Dark" in theme_name:
+        root.tk.call("set_theme", "dark")
+    else:
+        root.tk.call("set_theme", "light")
+
     root.withdraw()
 
     backup(RESOLV_CONF, RESOLV_BACKUP)
