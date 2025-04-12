@@ -13,7 +13,7 @@ NTP_BACKUP = "/etc/ntpsec/ntp.conf.guideos.bak"
 HOSTS_FILE = "/etc/hosts"
 HOSTS_BACKUP = "/etc/hosts.guideos.bak"
 WHITELIST_FILE = "/etc/guideos-hosts-whitelist.txt"
-BLOCKLIST_URL = "https://files.guideos.de/blocklist.txt"
+BLOCKLIST_URL = "https://raw.githubusercontent.com/GuideOS/guideos_privacy_wizard/main/blocklist.txt"
 BLOCK_START = "# BEGIN GuideOS Privacy-Block"
 BLOCK_END = "# END GuideOS Privacy-Block"
 
