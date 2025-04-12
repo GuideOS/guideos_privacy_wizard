@@ -49,4 +49,4 @@ Der Wizard fragt dich nacheinander:
 ## 🚀 Start
 
 ```bash
-sudo python3 guideos_privacy_wizard.py
+pkexec ./run_privacy_wizard.sh
