@@ -1,3 +1,32 @@
 # BEGIN GuideOS Privacy-Block
-0.0.0.0 ads.beispiel.de
+googleadservices.com
+doubleclick.net
+pagead2.googlesyndication.com
+tpc.googlesyndication.com
+partner.googleadservices.com
+facebook.net
+connect.facebook.net
+staticxx.facebook.com
+analytics.tiktok.com
+bat.bing.com
+ads.msn.com
+aax.amazon-adsystem.com
+c.amazon-adsystem.com
+trc.taboola.com
+odb.outbrain.com
+d.adroll.com
+ads.criteo.com
+cas.criteo.com
+scorecardresearch.com
+quantserve.com
+ads.pubmatic.com
+adform.net
+adnxs.com
+googletagmanager.com
+googletagservices.com
+moatads.com
+zedo.com
+revcontent.com
+gemius.pl
+optimizely.com
 # END GuideOS Privacy-Block
